@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestão TI — Protótipo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-icon">GT</div><div><strong>Gestão TI</strong><small>Operações & ativos</small></div></div>
+  <div class="navgroup">
+    <div class="navlabel">Visão geral</div>
+    <button class="navbtn active" data-page="dashboard"><span class="ico">▦</span> Painel</button>
+  </div>
+  <div class="navgroup">
+    <div class="navlabel">Operação</div>
+    <button class="navbtn" data-page="chamados"><span class="ico">▤</span> Chamados & OS</button>
+    <button class="navbtn" data-page="ativos"><span class="ico">▣</span> Inventário de ativos</button>
+    <button class="navbtn" data-page="impressoras"><span class="ico">▧</span> Impressoras</button>
+    <button class="navbtn" data-page="manutencoes"><span class="ico">⚒</span> Manutenções</button>
+    <button class="navbtn" data-page="estoque"><span class="ico">▥</span> Estoque</button>
+  </div>
+  <div class="navgroup">
+    <div class="navlabel">Suprimentos</div>
+    <button class="navbtn" data-page="compras"><span class="ico">🛒</span> Compras</button>
+    <button class="navbtn" data-page="fornecedores"><span class="ico">♧</span> Fornecedores</button>
+  </div>
+  <div class="navgroup">
+    <div class="navlabel">Administração</div>
+    <button class="navbtn" data-page="relatorios"><span class="ico">▥</span> Relatórios</button>
+    <button class="navbtn" data-page="usuarios"><span class="ico">♙</span> Usuários & permissões</button>
+  </div>
+  <div class="sidebar-foot">Protótipo demonstrativo · v0.1<br>Dados fictícios para avaliação</div>
+</aside>
+<main class="main">
+  <header class="topbar">
+    <div style="display:flex;align-items:center;gap:12px"><button class="btn mobilemenu" id="mobilemenu">☰</button><div><div class="crumb">Gestão de TI / <span id="crumb">Painel</span></div><strong id="topTitle">Visão geral</strong></div></div>
+    <div class="topright"><select id="roleSelect" class="role-select" aria-label="Simular perfil"><option value="Gestor de TI">Perfil: Gestor de TI</option><option value="Técnico de TI">Perfil: Técnico de TI</option><option value="Solicitante">Perfil: Solicitante</option><option value="Compras">Perfil: Compras</option><option value="Administrador">Perfil: Administrador</option></select><div class="avatar" id="avatar">GT</div></div>
+  </header>
+  <div class="content" id="content"></div>
+</main>
+</div>
+<div id="modalroot"></div><div id="toast" class="toast hidden"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
